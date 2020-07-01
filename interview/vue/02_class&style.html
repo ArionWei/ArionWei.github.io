@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Class 与 Style 动态绑定 | 前端小册</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/images/js.ico">
+    <meta name="description" content="打发无聊时间">
+    <link rel="preload" href="/assets/css/0.styles.599e61b5.css" as="style"><link rel="preload" href="/assets/js/app.a17c348c.js" as="script"><link rel="preload" href="/assets/js/2.7309e51e.js" as="script"><link rel="preload" href="/assets/js/13.f79a18de.js" as="script"><link rel="prefetch" href="/assets/js/10.fecb153a.js"><link rel="prefetch" href="/assets/js/11.b50021fd.js"><link rel="prefetch" href="/assets/js/12.f18047ff.js"><link rel="prefetch" href="/assets/js/14.232cd1f3.js"><link rel="prefetch" href="/assets/js/15.eeefbb1b.js"><link rel="prefetch" href="/assets/js/16.1829395c.js"><link rel="prefetch" href="/assets/js/17.96d700e8.js"><link rel="prefetch" href="/assets/js/18.4ee9723d.js"><link rel="prefetch" href="/assets/js/19.945a87a4.js"><link rel="prefetch" href="/assets/js/20.9fae2fae.js"><link rel="prefetch" href="/assets/js/21.0cd816f8.js"><link rel="prefetch" href="/assets/js/22.6a6386cf.js"><link rel="prefetch" href="/assets/js/23.d706bf19.js"><link rel="prefetch" href="/assets/js/24.14743dda.js"><link rel="prefetch" href="/assets/js/25.13726be5.js"><link rel="prefetch" href="/assets/js/26.644ad5c9.js"><link rel="prefetch" href="/assets/js/27.9818d038.js"><link rel="prefetch" href="/assets/js/28.b16ed616.js"><link rel="prefetch" href="/assets/js/29.f1aae2ef.js"><link rel="prefetch" href="/assets/js/3.34adbfb4.js"><link rel="prefetch" href="/assets/js/30.1a733cbc.js"><link rel="prefetch" href="/assets/js/31.280cde12.js"><link rel="prefetch" href="/assets/js/32.72661153.js"><link rel="prefetch" href="/assets/js/33.5bb4101d.js"><link rel="prefetch" href="/assets/js/34.6e92a4d9.js"><link rel="prefetch" href="/assets/js/35.46dfd907.js"><link rel="prefetch" href="/assets/js/36.3114bd43.js"><link rel="prefetch" href="/assets/js/37.8e7f1585.js"><link rel="prefetch" href="/assets/js/38.8f79926d.js"><link rel="prefetch" href="/assets/js/39.930acbf0.js"><link rel="prefetch" href="/assets/js/4.3cb7a180.js"><link rel="prefetch" href="/assets/js/5.994cf741.js"><link rel="prefetch" href="/assets/js/6.5c16144e.js"><link rel="prefetch" href="/assets/js/7.b81f1b37.js"><link rel="prefetch" href="/assets/js/8.76d1b0fd.js"><link rel="prefetch" href="/assets/js/9.bd2387c4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.599e61b5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端小册</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/tutorials/basicGrammar/statement.html" class="nav-link">
+  基础进阶
+</a></div><div class="nav-item"><a href="/interview/js/variable_hoisting.html" class="nav-link">
+  知识积累
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/tutorials/basicGrammar/statement.html" class="nav-link">
+  基础进阶
+</a></div><div class="nav-item"><a href="/interview/js/variable_hoisting.html" class="nav-link">
+  知识积累
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS 相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue相关</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/vue/01_v-show&amp;v-if.html" class="sidebar-link">v-show 与 v-if 的区别</a></li><li><a href="/interview/vue/02_class&amp;style.html" class="active sidebar-link">Class 与 Style 动态绑定</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>interview</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="class-与-style-动态绑定"><a href="#class-与-style-动态绑定" class="header-anchor">#</a> Class 与 Style 动态绑定</h1> <p>class 可以通过对象语法和数组语法进行动态绑定：</p> <ul><li>对象语法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>div v<span class="token operator">-</span>bind<span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;{ active: isActive, 'text-danger': hasError }&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+data<span class="token operator">:</span> <span class="token punctuation">{</span>
+  isActive<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  hasError<span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>数组语法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>div v<span class="token operator">-</span>bind<span class="token operator">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;[isActive ? activeClass : '', errorClass]&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+data<span class="token operator">:</span> <span class="token punctuation">{</span>
+  isActive<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  activeClass<span class="token operator">:</span> <span class="token string">'active'</span><span class="token punctuation">,</span>
+  errorClass<span class="token operator">:</span> <span class="token string">'text-danger'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>style 也可以通过对象语法和数组语法进行动态绑定：</p> <ul><li>对象语法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>div v<span class="token operator">-</span>bind<span class="token operator">:</span>style<span class="token operator">=</span><span class="token string">&quot;{ color: activeColor, fontSize: fontSize + 'px' }&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+data<span class="token operator">:</span> <span class="token punctuation">{</span>
+  activeColor<span class="token operator">:</span> <span class="token string">'red'</span><span class="token punctuation">,</span>
+  fontSize<span class="token operator">:</span> <span class="token number">30</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>数组语法</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>div v<span class="token operator">-</span>bind<span class="token operator">:</span>style<span class="token operator">=</span><span class="token string">&quot;[styleColor, styleSize]&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+data<span class="token operator">:</span> <span class="token punctuation">{</span>
+  styleColor<span class="token operator">:</span> <span class="token punctuation">{</span> color<span class="token operator">:</span> <span class="token string">'red'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  styleSize<span class="token operator">:</span> <span class="token punctuation">{</span> fontSize<span class="token operator">:</span><span class="token string">'23px'</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">2020-06-17 17:58</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/interview/vue/01_v-show&amp;v-if.html" class="prev">
+        v-show 与 v-if 的区别
+      </a></span> <span class="next"><a href="/interview/vue/interview.html">
+        Interview question
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.a17c348c.js" defer></script><script src="/assets/js/2.7309e51e.js" defer></script><script src="/assets/js/13.f79a18de.js" defer></script>
+  </body>
+</html>
